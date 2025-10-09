@@ -2,10 +2,10 @@ type HomeMetaDescriptor =
 	| { title: string }
 	| { name: string; content: string }
 	| { property: string; content: string }
-	| { 'http-equiv': string; content: string };
+	| { httpEquiv: string; content: string };
 
 const HOME_META_DATA: HomeMetaDescriptor[] = [
-	{ 'http-equiv': 'Content-type', content: 'text/html; charset=utf-8' },
+	{ httpEquiv: 'Content-type', content: 'text/html; charset=utf-8' },
 	{
 		name: 'viewport',
 		content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0',
