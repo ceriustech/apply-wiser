@@ -16,18 +16,18 @@ export default function Home() {
 		<main className="relative min-h-screen pt-10 bg-applywiser-gradient overflow-hidden">
 			<NavBar />
 			<section className="main-section">
-				<div className="page-heading">
+				<div className="page-heading py-16">
 					<h1>Track Your Applications & resume Ratings</h1>
 					<h2>Review your submissions and check AI powered feedback.</h2>
 				</div>
+				{hasResumeData && (
+					<div className="resume-section">
+						{RESUME_DATA.map((resume) => (
+							<ResumeCard key={resume.id} data={resume} />
+						))}
+					</div>
+				)}
 			</section>
-			{hasResumeData && (
-				<section className="resume-section">
-					{RESUME_DATA.map((resume) => (
-						<ResumeCard key={resume.id} data={resume} />
-					))}
-				</section>
-			)}
 		</main>
 	);
 }
