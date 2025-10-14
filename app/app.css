@@ -117,6 +117,21 @@ form {
 	}
 }
 
+@layer utilities {
+	.bg-applywiser-gradient {
+		background: linear-gradient(
+			135deg,
+			#d9f4ef 0%,
+			/* very light teal */ #cde6ff 25%,
+			/* pale sky blue */ #d8d5ff 55%,
+			/* soft violet */ #e1d1ff 80%,
+			/* light lavender */ #d5f1d9 100% /* pale mint */
+		);
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
 @utility bg-gradient {
 	background: linear-gradient(to bottom, #f0f4ff 60%, #fa7185cc);
 }
