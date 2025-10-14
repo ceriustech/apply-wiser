@@ -25,7 +25,6 @@ const NavBarIcon = () => {
 					/>
 				</div>
 			)}
-			{/* <p className="text-2xl font-bold text-gradient">RESUME</p> */}
 		</Link>
 	);
 };

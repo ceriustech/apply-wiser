@@ -1,4 +1,4 @@
-export const RESUME_DATA: Resume[] = [
+const RESUME_DATA: Resume[] = [
 	{
 		id: '1',
 		companyName: 'Google',
@@ -180,3 +180,24 @@ export const RESUME_DATA: Resume[] = [
 		},
 	},
 ];
+
+const NAVBAR_DATA: NAVIGATION[] = [
+	{
+		url: '/',
+		name: 'HOME',
+	},
+	{
+		url: '/faq',
+		name: 'FAQ',
+	},
+	{
+		url: '/about',
+		name: 'ABOUT',
+	},
+	{
+		url: '/auth',
+		name: 'LOGIN',
+	},
+];
+
+export { RESUME_DATA, NAVBAR_DATA };

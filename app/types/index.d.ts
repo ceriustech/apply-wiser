@@ -1,3 +1,9 @@
+type PageMetaData =
+	| { title: string }
+	| { name: string; content: string }
+	| { property: string; content: string }
+	| { httpEquiv: string; content: string };
+
 interface Resume {
 	id: string;
 	companyName: string;
@@ -22,3 +28,8 @@ type Feedback = {
 		tips: string[];
 	};
 };
+
+interface NAVIGATION {
+	url: string;
+	name: string;
+}

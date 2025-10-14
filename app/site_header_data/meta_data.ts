@@ -1,10 +1,4 @@
-type HomeMetaDescriptor =
-	| { title: string }
-	| { name: string; content: string }
-	| { property: string; content: string }
-	| { httpEquiv: string; content: string };
-
-const HOME_META_DATA: HomeMetaDescriptor[] = [
+const HOME_META_DATA: PageMetaData[] = [
 	{ httpEquiv: 'Content-type', content: 'text/html; charset=utf-8' },
 	{
 		name: 'viewport',
@@ -22,4 +16,28 @@ const HOME_META_DATA: HomeMetaDescriptor[] = [
 	{ property: 'og:description', content: 'AI resume helper' },
 ];
 
-export { HOME_META_DATA };
+const AUTH_META_DATA: PageMetaData[] = [
+	{ title: 'ApplyWiser | Auth' },
+	{
+		name: 'description',
+		content:
+			'Log in to your ApplyWiser account to access your AI-powered resume tools and job application insights.',
+	},
+	{
+		name: 'keywords',
+		content: [
+			'AI resume builder login',
+			'ApplyWiser login',
+			'resume AI tool sign in',
+			'job application dashboard login',
+			'AI resume tailoring login',
+			'AI resume editor login',
+			'custom resume generator',
+			'resume personalization tool',
+			'resume analysis login',
+			'career AI assistant login',
+		].join(', '),
+	},
+];
+
+export { HOME_META_DATA, AUTH_META_DATA };

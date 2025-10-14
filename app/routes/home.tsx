@@ -4,12 +4,11 @@ import NavBar from '~/components/nav_bar';
 import ResumeCard from '~/components/resume_card';
 import { HOME_META_DATA } from '~/site_header_data/meta_data';
 import { RESUME_DATA } from '~/constants';
+import { createTypedMetaFunction } from '~/site_header_data/utils';
 
-export function meta({}: Route.MetaArgs) {
-	return HOME_META_DATA;
-}
+export const meta = createTypedMetaFunction<Route.MetaArgs>(HOME_META_DATA);
 
-export default function Home() {
+const Home = () => {
 	const hasResumeData = RESUME_DATA.length > 0;
 
 	return (
@@ -30,4 +29,6 @@ export default function Home() {
 			</section>
 		</main>
 	);
-}
+};
+
+export default Home;
