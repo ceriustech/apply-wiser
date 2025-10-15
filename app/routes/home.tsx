@@ -16,8 +16,8 @@ const Home = () => {
 			<NavBar />
 			<section className="main-section">
 				<div className="page-heading py-16">
-					<h1>Track Your Applications & resume Ratings</h1>
-					<h2>Review your submissions and check AI powered feedback.</h2>
+					<h1>Apply Smarter. Track Your Applications & Land Sooner</h1>
+					<h2>Get real-time insights and resume ratings powered by AI.</h2>
 				</div>
 				{hasResumeData && (
 					<div className="resume-section">

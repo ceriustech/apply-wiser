@@ -8,7 +8,7 @@ const NavBar = () => {
 			<NavBarIcon />
 			{/* <p className="text-2xl font-bold text-gradient">HOME</p> */}
 			<Link to="/upload" className="primary-button w-fit">
-				Upload Resume
+				Rate My Resume
 			</Link>
 		</nav>
 	);
