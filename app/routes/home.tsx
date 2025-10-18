@@ -1,4 +1,7 @@
 import type { Route } from './+types/home';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
+import { usePuterStore } from '~/lib/puter';
 
 import NavBar from '~/components/nav_bar';
 import ResumeCard from '~/components/resume_card';
@@ -9,6 +12,13 @@ import { createTypedMetaFunction } from '~/site_header_data/utils';
 export const meta = createTypedMetaFunction<Route.MetaArgs>(HOME_META_DATA);
 
 const Home = () => {
+	const { auth } = usePuterStore();
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (!auth.isAuthenticated) navigate('/auth?next=/');
+	}, [auth.isAuthenticated]);
+
 	const hasResumeData = RESUME_DATA.length > 0;
 
 	return (
