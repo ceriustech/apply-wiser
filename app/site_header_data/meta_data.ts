@@ -25,18 +25,8 @@ const AUTH_META_DATA: PageMetaData[] = [
 	},
 	{
 		name: 'keywords',
-		content: [
-			'AI resume builder login',
-			'ApplyWiser login',
-			'resume AI tool sign in',
-			'job application dashboard login',
-			'AI resume tailoring login',
-			'AI resume editor login',
-			'custom resume generator',
-			'resume personalization tool',
-			'resume analysis login',
-			'career AI assistant login',
-		].join(', '),
+		content:
+			'AI resume builder login, ApplyWiser login, resume AI tool sign in, job application dashboard login, AI resume tailoring login, AI resume editor login, custom resume generator, resume personalization tool, resume analysis login, career AI assistant login',
 	},
 ];
 
