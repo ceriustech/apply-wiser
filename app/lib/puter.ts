@@ -44,6 +44,7 @@ declare global {
 
 interface PuterStore {
 	isLoading: boolean;
+	isInitialized: boolean;
 	error: string | null;
 	puterReady: boolean;
 	auth: {
@@ -104,6 +105,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
 		set({
 			error: msg,
 			isLoading: false,
+			isInitialized: false,
 			auth: {
 				user: null,
 				isAuthenticated: false,
@@ -245,7 +247,9 @@ export const usePuterStore = create<PuterStore>((set, get) => {
 		const puter = getPuter();
 		if (puter) {
 			set({ puterReady: true });
-			checkAuthStatus();
+			checkAuthStatus().then(() => {
+				set({ isInitialized: true });
+			});
 			return;
 		}
 
@@ -413,6 +417,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
 
 	return {
 		isLoading: true,
+		isInitialized: true,
 		error: null,
 		puterReady: false,
 		auth: {

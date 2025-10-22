@@ -12,12 +12,20 @@ import { createTypedMetaFunction } from '~/site_header_data/utils';
 export const meta = createTypedMetaFunction<Route.MetaArgs>(HOME_META_DATA);
 
 const Home = () => {
-	const { auth } = usePuterStore();
+	const { isInitialized, auth } = usePuterStore();
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (!auth.isAuthenticated) navigate('/auth?next=/');
-	}, [auth.isAuthenticated]);
+		if (isInitialized && !auth.isAuthenticated) navigate('/auth?next=/');
+	}, [isInitialized, auth.isAuthenticated, navigate]);
+
+	if (!isInitialized || !auth.isAuthenticated) {
+		return (
+			<div className="min-h-screen flex items-center justify-center bg-applywiser-gradient">
+				<div>Loading...</div>
+			</div>
+		);
+	}
 
 	const hasResumeData = RESUME_DATA.length > 0;
 
