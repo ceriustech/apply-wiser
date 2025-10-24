@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-import type { Route } from './+types/home';
+import type { Route } from './+types';
 import { usePuterStore } from '~/lib/puter';
 
 import { createTypedMetaFunction } from '~/site_header_data/utils';

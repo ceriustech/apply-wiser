@@ -1,4 +1,4 @@
-import type { Route } from './+types/home';
+import type { Route } from './+types';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { usePuterStore } from '~/lib/puter';
