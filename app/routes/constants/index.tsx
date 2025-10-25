@@ -4,6 +4,7 @@ export interface Routes {
 	name: string;
 	component: string;
 	access: 'public' | 'private' | 'auth';
+	layout?: string;
 }
 
 const PAGE_ROUTES_DATA: Record<string, Routes> = {
@@ -13,6 +14,7 @@ const PAGE_ROUTES_DATA: Record<string, Routes> = {
 		name: 'Home',
 		component: 'routes/pages/private/home/index.tsx',
 		access: 'private',
+		layout: 'routes/components/layout/index.tsx',
 	},
 	RESUME: {
 		id: 'resume',
@@ -20,6 +22,7 @@ const PAGE_ROUTES_DATA: Record<string, Routes> = {
 		name: 'Resume',
 		component: 'routes/pages/private/resume/index.tsx',
 		access: 'private',
+		layout: 'routes/components/layout/index.tsx',
 	},
 	UPLOAD: {
 		id: 'upload',
@@ -27,6 +30,7 @@ const PAGE_ROUTES_DATA: Record<string, Routes> = {
 		name: 'Upload',
 		component: 'routes/pages/private/upload/index.tsx',
 		access: 'private',
+		layout: 'routes/components/layout/index.tsx',
 	},
 	WIPE: {
 		id: 'wipe',
@@ -34,6 +38,7 @@ const PAGE_ROUTES_DATA: Record<string, Routes> = {
 		name: 'Wipe',
 		component: 'routes/pages/private/wipe/index.tsx',
 		access: 'private',
+		layout: 'routes/components/layout/index.tsx',
 	},
 	AUTH: {
 		id: 'auth',

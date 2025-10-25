@@ -416,8 +416,8 @@ export const usePuterStore = create<PuterStore>((set, get) => {
 	};
 
 	return {
-		isLoading: true,
-		isInitialized: true,
+		isLoading: false,
+		isInitialized: false,
 		error: null,
 		puterReady: false,
 		auth: {
