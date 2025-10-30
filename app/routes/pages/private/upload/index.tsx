@@ -8,7 +8,7 @@ import { generateUUID } from '~/lib/utils';
 import { setInstructions } from '~/constants';
 
 const Upload = () => {
-	const { auth, isLoading, fs, ai, kv } = usePuterStore();
+	const { fs, ai, kv } = usePuterStore();
 	const navigate = useNavigate();
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [statusText, setStatusText] = useState('');
@@ -93,7 +93,7 @@ const Upload = () => {
 	};
 
 	return (
-		<main className="bg-[url('/images/bg-main.svg')] bg-cover">
+		<main className="bg-applywiser-gradient">
 			<NavBar />
 
 			<section className="main-section">

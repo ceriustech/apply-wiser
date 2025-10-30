@@ -59,12 +59,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 	}, [init]);
 
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<head>
 				<Meta />
 				<Links />
 			</head>
-			<body>
+			<body suppressHydrationWarning>
 				<script src="https://js.puter.com/v2/"></script>
 				{children}
 				<ScrollRestoration />
