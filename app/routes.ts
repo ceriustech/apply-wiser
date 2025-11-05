@@ -13,9 +13,6 @@ const privateRoutes = Object.values(PAGE_ROUTES_DATA).filter(
 const publicRoutes = Object.values(PAGE_ROUTES_DATA).filter(
 	(r) => r.access === 'public'
 );
-const authRoutes = Object.values(PAGE_ROUTES_DATA).filter(
-	(r) => r.access === 'auth'
-);
 
 const ROUTES: RouteConfig = [
 	// Private routes wrapped in auth layout
@@ -27,9 +24,6 @@ const ROUTES: RouteConfig = [
 
 	// Public routes (no layout)
 	...publicRoutes.map((r) => route(r.path, r.component)),
-
-	// Auth routes (no layout)
-	...authRoutes.map((r) => route(r.path, r.component)),
 ];
 
 export default ROUTES;

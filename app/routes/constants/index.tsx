@@ -45,7 +45,7 @@ const PAGE_ROUTES_DATA: Record<string, Routes> = {
 		path: '/auth',
 		name: 'Auth',
 		component: 'routes/pages/auth/index.tsx',
-		access: 'auth', // special case
+		access: 'public',
 	},
 	FAQ: {
 		id: 'faq',
