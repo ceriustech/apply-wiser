@@ -11,8 +11,9 @@ export const meta = createTypedMetaFunction<Route.MetaArgs>(AUTH_META_DATA);
 const Auth = () => {
 	const { isLoading, auth } = usePuterStore();
 	const location = useLocation();
-	const next = location.search.split('next=')[1];
+	const next = new URLSearchParams(location.search).get('next') || '/';
 	const navigate = useNavigate();
+	const authSubtext = auth.isAuthenticated ? 'Click to logout' : 'Log in';
 
 	useEffect(() => {
 		if (auth.isAuthenticated) navigate(next);
@@ -24,7 +25,7 @@ const Auth = () => {
 				<section className="flex flex-col gap-8 bg-white rounded-2xl p-10">
 					<div className="flex flex-col items-center gap-2 text-center">
 						<h1>Welcome</h1>
-						<h2>Log in</h2>
+						<h2>{authSubtext}</h2>
 					</div>
 					<div>
 						{isLoading ? (
@@ -33,15 +34,9 @@ const Auth = () => {
 							</button>
 						) : (
 							<>
-								{auth.isAuthenticated ? (
-									<button className="auth-button" onClick={auth.signOut}>
-										<p>Log Out</p>
-									</button>
-								) : (
-									<button className="auth-button" onClick={auth.signIn}>
-										<p>Log In</p>
-									</button>
-								)}
+								<button className="auth-button" onClick={auth.signIn}>
+									<p>Log In</p>
+								</button>
 							</>
 						)}
 					</div>

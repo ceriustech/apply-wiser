@@ -98,14 +98,14 @@ const Upload = () => {
 
 			<section className="main-section">
 				<div className="page-heading py-16">
-					<h1>Smart feedback for your dream job</h1>
+					<h1>Boost Your Resume!</h1>
 					{isProcessing ? (
 						<>
 							<h2>{statusText}</h2>
 							<img src="/images/resume-scan.gif" className="w-full" />
 						</>
 					) : (
-						<h2>Drop your resume for an ATS score and improvement tips</h2>
+						<h2>Get your ATS score with powerful feedback</h2>
 					)}
 					{!isProcessing && (
 						<form
@@ -156,4 +156,5 @@ const Upload = () => {
 		</main>
 	);
 };
+
 export default Upload;
