@@ -200,7 +200,7 @@ const NAVBAR_DATA: NAVIGATION[] = [
 	},
 ];
 
-export const AIResponseFormat = `
+const AIResponseFormat = `
       interface Feedback {
       overallScore: number; //max 100
       ATS: {
@@ -244,7 +244,7 @@ export const AIResponseFormat = `
       };
     }`;
 
-export const setInstructions = ({
+const setInstructions = ({
 	jobTitle,
 	jobDescription,
 }: {
@@ -265,4 +265,4 @@ export const setInstructions = ({
       Return the analysis as an JSON object, without any other text and without the backticks.
       Do not include any other text or comments.`;
 
-export { RESUME_DATA, NAVBAR_DATA };
+export { RESUME_DATA, NAVBAR_DATA, setInstructions };
