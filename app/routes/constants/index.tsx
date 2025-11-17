@@ -18,7 +18,7 @@ const PAGE_ROUTES_DATA: Record<string, Routes> = {
 	},
 	RESUME: {
 		id: 'resume',
-		path: '/resume',
+		path: '/resume/:id',
 		name: 'Resume',
 		component: 'routes/pages/private/resume/index.tsx',
 		access: 'private',

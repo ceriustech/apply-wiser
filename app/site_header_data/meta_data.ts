@@ -30,4 +30,12 @@ const AUTH_META_DATA: PageMetaData[] = [
 	},
 ];
 
-export { HOME_META_DATA, AUTH_META_DATA };
+const RESUME_META_DATA: PageMetaData[] = [
+	{ title: 'ApplyWiser | Resume' },
+	{
+		name: 'description',
+		content: 'resume score, detailed resume overview, ats score',
+	},
+];
+
+export { HOME_META_DATA, AUTH_META_DATA, RESUME_META_DATA };
