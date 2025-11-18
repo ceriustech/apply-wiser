@@ -31,10 +31,16 @@ const AUTH_META_DATA: PageMetaData[] = [
 ];
 
 const RESUME_META_DATA: PageMetaData[] = [
-	{ title: 'ApplyWiser | Resume' },
+	{ title: 'AI Resume Checker & ATS Score Analyzer | ApplyWiser' },
 	{
 		name: 'description',
-		content: 'resume score, detailed resume overview, ats score',
+		content:
+			'Get your resume scored instantly with ApplyWiser. Analyze ATS compatibility, keyword optimization, formatting, and more using our AI-powered resume checker.',
+	},
+	{
+		name: 'keywords',
+		content:
+			'AI resume checker, resume score, resume analysis tool, ATS resume test, resume optimization, resume feedback, job application tools, improve resume, resume grader, ATS compatibility',
 	},
 ];
 
