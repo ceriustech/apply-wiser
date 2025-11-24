@@ -4,6 +4,15 @@ type PageMetaData =
 	| { property: string; content: string }
 	| { httpEquiv: string; content: string };
 
+interface Tip {
+	type: 'good' | 'improve';
+	tip: string;
+}
+
+interface DetailedTip extends Tip {
+	explanation: string;
+}
+
 interface Resume {
 	id: string;
 	companyName: string;
@@ -22,10 +31,14 @@ type FeedbackCategory =
 
 type Feedback = {
 	overallScore: number;
+	ATS: {
+		score: number;
+		tips: Tip[]; // ATS tips don't have explanations
+	};
 } & {
 	[K in FeedbackCategory]: {
 		score: number;
-		tips: string[];
+		tips: DetailedTip[]; // Other categories have explanations
 	};
 };
 
