@@ -33,8 +33,6 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
 			maxSize: maxFileSize,
 		});
 
-	const file = acceptedFiles[0] || null;
-
 	return (
 		<div className="w-full gradient-border">
 			<div {...getRootProps()}>

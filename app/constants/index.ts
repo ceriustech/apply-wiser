@@ -1,3 +1,4 @@
+// app\constants\index.ts
 const RESUME_DATA: Resume[] = [
 	{
 		id: '1',
