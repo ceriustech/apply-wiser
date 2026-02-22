@@ -51,10 +51,10 @@ const Wipe = () => {
 			</div>
 			<div>
 				<button
-					className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer"
+					className="bg-transparent border border-blue-500 text-black px-4 py-2 rounded-full cursor-pointer"
 					onClick={() => handleDelete()}
 				>
-					Wipe App Data
+					X
 				</button>
 			</div>
 		</div>
