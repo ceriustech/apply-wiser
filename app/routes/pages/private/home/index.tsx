@@ -29,7 +29,7 @@ const Home = () => {
 			const resumes = (await kv.list('resume:*', true)) as KVItem[];
 
 			const parsedResumes = resumes?.map(
-				(resume) => JSON.parse(resume.value) as Resume
+				(resume) => JSON.parse(resume.value) as Resume,
 			);
 
 			setResumes(parsedResumes || []);
@@ -44,7 +44,7 @@ const Home = () => {
 			<NavBar />
 			<section className="main-section">
 				<div className="page-heading py-16">
-					<h1>Apply Smarter. Track Your Applications & Land Sooner</h1>
+					<h1>Apply Smarter & Land Sooner</h1>
 					<h2>Get real-time insights and resume ratings powered by AI.</h2>
 				</div>
 				{loadingResumes && (
