@@ -204,14 +204,14 @@ const NAVBAR_DATA: NAVIGATION[] = [
 const AIResponseFormat = `
       interface Feedback {
       overallScore: number; //max 100
-      ATS: {
+      scannability: {
         score: number; //rate based on ATS suitability
         tips: {
           type: "good" | "improve";
           tip: string; //give 3-4 tips
         }[];
       };
-      toneAndStyle: {
+      bulletPointQuality: {
         score: number; //max 100
         tips: {
           type: "good" | "improve";
@@ -219,7 +219,7 @@ const AIResponseFormat = `
           explanation: string; //explain in detail here
         }[]; //give 3-4 tips
       };
-      content: {
+      roleAlignment: {
         score: number; //max 100
         tips: {
           type: "good" | "improve";
@@ -227,7 +227,7 @@ const AIResponseFormat = `
           explanation: string; //explain in detail here
         }[]; //give 3-4 tips
       };
-      structure: {
+      presentationAndClarity: {
         score: number; //max 100
         tips: {
           type: "good" | "improve";

@@ -4,7 +4,6 @@ import type { ATSProps } from './types';
 import { getGradientClass, getIconSrc } from './utils';
 
 const ATS: React.FC<ATSProps> = ({ score, suggestions }) => {
-	console.log('SUGGESTION:', suggestions);
 	// Determine background gradient based on score
 	const gradientClass = getGradientClass(score);
 

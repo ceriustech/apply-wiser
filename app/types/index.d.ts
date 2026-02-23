@@ -23,22 +23,22 @@ interface Resume {
 }
 
 type FeedbackCategory =
-	| 'ATS'
-	| 'toneAndStyle'
-	| 'content'
-	| 'structure'
+	| 'scannability'
+	| 'bulletPointQuality'
+	| 'roleAlignment'
+	| 'presentationAndClarity'
 	| 'skills';
 
 type Feedback = {
 	overallScore: number;
-	ATS: {
+	resume: {
 		score: number;
-		tips: Tip[]; // ATS tips don't have explanations
+		tips: Tip[];
 	};
 } & {
 	[K in FeedbackCategory]: {
 		score: number;
-		tips: DetailedTip[]; // Other categories have explanations
+		tips: DetailedTip[];
 	};
 };
 

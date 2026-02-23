@@ -12,37 +12,48 @@ const Details = ({ feedback }: { feedback: Feedback }) => {
 	return (
 		<div className="flex flex-col gap-4 w-full">
 			<Accordion>
-				<AccordionItem id="tone-style">
-					<AccordionHeader itemId="tone-style">
+				<AccordionItem id="scannability">
+					<AccordionHeader itemId="scannability">
 						<CategoryHeader
-							title="Tone & Style"
-							categoryScore={feedback.toneAndStyle.score}
+							title="Scannability"
+							categoryScore={feedback.scannability.score}
 						/>
 					</AccordionHeader>
-					<AccordionContent itemId="tone-style">
-						<CategoryContent tips={feedback.toneAndStyle.tips} />
+					<AccordionContent itemId="scannability">
+						<CategoryContent tips={feedback.scannability.tips} />
 					</AccordionContent>
 				</AccordionItem>
-				<AccordionItem id="content">
-					<AccordionHeader itemId="content">
+				<AccordionItem id="bullet-point-quality">
+					<AccordionHeader itemId="bullet-point-quality">
 						<CategoryHeader
-							title="Content"
-							categoryScore={feedback.content.score}
+							title="Bullet Point Quality"
+							categoryScore={feedback.bulletPointQuality.score}
 						/>
 					</AccordionHeader>
-					<AccordionContent itemId="content">
-						<CategoryContent tips={feedback.content.tips} />
+					<AccordionContent itemId="bullet-point-quality">
+						<CategoryContent tips={feedback.bulletPointQuality.tips} />
 					</AccordionContent>
 				</AccordionItem>
-				<AccordionItem id="structure">
-					<AccordionHeader itemId="structure">
+				<AccordionItem id="role-alignment">
+					<AccordionHeader itemId="role-alignment">
 						<CategoryHeader
-							title="Structure"
-							categoryScore={feedback.structure.score}
+							title="Role Alignment"
+							categoryScore={feedback.roleAlignment.score}
 						/>
 					</AccordionHeader>
-					<AccordionContent itemId="structure">
-						<CategoryContent tips={feedback.structure.tips} />
+					<AccordionContent itemId="role-alignment">
+						<CategoryContent tips={feedback.roleAlignment.tips} />
+					</AccordionContent>
+				</AccordionItem>
+				<AccordionItem id="presentation-clarity">
+					<AccordionHeader itemId="presentation-clarity">
+						<CategoryHeader
+							title="Presentation & Clarity"
+							categoryScore={feedback.presentationAndClarity.score}
+						/>
+					</AccordionHeader>
+					<AccordionContent itemId="presentation-clarity">
+						<CategoryContent tips={feedback.presentationAndClarity.tips} />
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem id="skills">

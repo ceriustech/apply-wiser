@@ -1,6 +1,14 @@
 import ScoreBadge from '../score_badge';
 
-const Category = ({ title, score }: { title: string; score: number }) => {
+const Category = ({
+	title,
+	score,
+	weight,
+}: {
+	title: string;
+	score: number;
+	weight?: string;
+}) => {
 	const textColor =
 		score > 70
 			? 'text-green-600'
@@ -13,6 +21,11 @@ const Category = ({ title, score }: { title: string; score: number }) => {
 			<div className="category">
 				<div className="flex flex-row gap-2 items-center justify-center">
 					<p className="text-2xl">{title}</p>
+					{weight && (
+						<span className="text-sm text-gray-400 font-normal">
+							({weight})
+						</span>
+					)}
 					<ScoreBadge score={score} />
 				</div>
 				<p className="text-2xl">

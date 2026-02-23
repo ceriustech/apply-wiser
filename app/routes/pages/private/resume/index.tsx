@@ -5,7 +5,6 @@ import { usePuterStore } from '~/lib/puter';
 import type { Route } from './+types';
 
 import Summary from '~/components/summary';
-import ATS from '~/components/ats';
 import Details from '~/components/details';
 import { createTypedMetaFunction } from '~/site_header_data/utils';
 import { RESUME_META_DATA } from '~/site_header_data/meta_data';
@@ -46,7 +45,6 @@ const Resume = () => {
 			setImageUrl(imageUrl);
 
 			setFeedback(data.feedback);
-			console.log({ resumeUrl, imageUrl, feedback: data.feedback });
 		};
 
 		loadResume();
@@ -64,7 +62,6 @@ const Resume = () => {
 			</nav>
 			<div className="flex flex-row w-full max-lg:flex-col-reverse">
 				<section className="fedback-section animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-wxl:h-fit w-fit">
-					{/* Needs to be able to support multiple page view for uploaded resumes*/}
 					{imageUrl && resumeUrl && (
 						<div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-wxl:h-fit w-fit">
 							<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
@@ -82,10 +79,6 @@ const Resume = () => {
 					{feedback ? (
 						<div className="flex flex-col gap-8 animate-in fade-in duration-1000">
 							<Summary feedback={feedback} />
-							<ATS
-								score={feedback.ATS.score || 0}
-								suggestions={feedback.ATS.tips || []}
-							/>
 							<Details feedback={feedback} />
 						</div>
 					) : (
