@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { usePuterStore } from '~/lib/puter';
 
+import { FaRegTrashAlt } from 'react-icons/fa';
+
 const DeleteResumeButton = () => {
 	const { fs, kv } = usePuterStore();
 	const [files, setFiles] = useState<FSItem[]>([]);
@@ -23,12 +25,9 @@ const DeleteResumeButton = () => {
 	};
 
 	return (
-		<div>
-			<button
-				className="bg-transparent border border-blue-500 text-black px-4 py-2 rounded-full cursor-pointer"
-				onClick={() => handleDelete()}
-			>
-				X
+		<div className='flex flex-row '>
+			<button className="cursor-pointer" onClick={() => handleDelete()}>
+				<FaRegTrashAlt />
 			</button>
 		</div>
 	);

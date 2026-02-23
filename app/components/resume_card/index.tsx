@@ -26,6 +26,8 @@ const ResumeCard = ({
 
 	return (
 		<div className="resume-card animate-in fade-in duration-1000">
+								<DeleteResumeButton />
+
 			<div className="resume-card-header">
 				<div className="flex flex-col gap-2">
 					{companyName && (
@@ -38,10 +40,11 @@ const ResumeCard = ({
 						<h2 className="!text-black font-bold">Resume</h2>
 					)}
 				</div>
-				<Link to={`/resume/${id}`} className="flex-shrink-0">
-					<ScoreCircle score={feedback.overallScore} />
-				</Link>
-				<DeleteResumeButton />
+				<div>
+					<Link to={`/resume/${id}`} className="flex-shrink-0">
+						<ScoreCircle score={feedback.overallScore} />
+					</Link>
+				</div>
 			</div>
 			{resumeUrl && (
 				<div className="gradient-border animate-in fade-in duration-1000">

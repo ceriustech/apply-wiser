@@ -6,7 +6,6 @@ import type { Route } from './+types';
 import NavBar from '~/components/nav_bar';
 import ResumeCard from '~/components/resume_card';
 import { HOME_META_DATA } from '~/site_header_data/meta_data';
-import { RESUME_DATA } from '~/constants';
 import { createTypedMetaFunction } from '~/site_header_data/utils';
 
 export const meta = createTypedMetaFunction<Route.MetaArgs>(HOME_META_DATA);
