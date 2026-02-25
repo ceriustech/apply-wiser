@@ -26,12 +26,12 @@ const Details = ({ feedback }: { feedback: Feedback }) => {
 				<AccordionItem id="bullet-point-quality">
 					<AccordionHeader itemId="bullet-point-quality">
 						<CategoryHeader
-							title="Bullet Point Quality"
-							categoryScore={feedback.bulletPointQuality.score}
+							title="Statement Quality"
+							categoryScore={feedback.statementQuality.score}
 						/>
 					</AccordionHeader>
 					<AccordionContent itemId="bullet-point-quality">
-						<CategoryContent tips={feedback.bulletPointQuality.tips} />
+						<CategoryContent tips={feedback.statementQuality.tips} />
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem id="role-alignment">

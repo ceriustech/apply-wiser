@@ -22,7 +22,7 @@ const Summary = ({ feedback }: { feedback: Feedback }) => {
 			/>
 			<Category
 				title="Bullet Point Quality"
-				score={feedback.bulletPointQuality.score}
+				score={feedback.statementQuality.score}
 				weight="25%"
 			/>
 			<Category

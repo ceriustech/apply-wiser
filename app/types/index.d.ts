@@ -24,7 +24,7 @@ interface Resume {
 
 type FeedbackCategory =
 	| 'scannability'
-	| 'bulletPointQuality'
+	| 'statementQuality'
 	| 'roleAlignment'
 	| 'presentationAndClarity'
 	| 'skills';
