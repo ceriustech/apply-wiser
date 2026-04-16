@@ -38,7 +38,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Index() {
 	return (
-		<div className="min-h-screen bg-linear-to-br from-blue-100 via-purple-50 to-green-100 font-sans">
+		<main className="font-sans">
 			{/* NAV */}
 			<nav className="sticky top-0 z-50 backdrop-blur-md bg-white/60 border-b border-white/40">
 				<div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
@@ -243,6 +243,6 @@ export default function Index() {
 					</p>
 				</div>
 			</footer>
-		</div>
+		</main>
 	);
 }

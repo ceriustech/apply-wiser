@@ -6,8 +6,12 @@
 		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-html,
+html {
+	min-height: 100vh;
+	background-image: linear-gradient(to bottom right, #dbeafe, #faf5ff, #dcfce7);
+	background-attachment: fixed;
+}
+
 body {
-	background: linear-gradient(135deg, #dbeafe 0%, #f3e8ff 50%, #d1fae5 100%);
 	min-height: 100vh;
 }
