@@ -14,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: 'description',
 			content:
-				'Stop guessing. Start tracking. ApplyWiser offers LIFT, a Google Sheet that shows you which job platforms actually lead to interviews — and which ones ghost you. One-time $9 purchase.',
+				'Stop guessing. Start tracking. ApplyWiser offers LIFT, a job platform tracker that shows you which platforms actually lead to interviews — and which ones ghost you. One-time $9 purchase.',
 		},
 		{
 			name: 'keywords',
