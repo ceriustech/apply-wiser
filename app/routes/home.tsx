@@ -217,12 +217,14 @@ export default function Index() {
 									<li>• Future Upgrades Available</li>
 								</ul>
 							</div>
-							<a
-								href="YOUR_STRIPE_PAYMENT_LINK_HERE"
-								className="block w-full bg-blue-900 hover:bg-blue-700 text-white font-semibold py-4 rounded-xl text-center transition-colors shadow-lg shadow-blue-600/30"
-							>
-								Buy Now and Start Optimizing
-							</a>
+							<form action="/api/checkout" method="POST">
+								<button
+									type="submit"
+									className="block w-full items-center gap-2 bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02]"
+								>
+									Start Optimizing Your Search Today
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>
