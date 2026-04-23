@@ -1,6 +1,7 @@
 import type { ActionFunctionArgs } from 'react-router';
 import { redirect } from 'react-router';
 import { stripe } from '~/lib/stripe.server';
+import { env } from '~/lib/env.server';
 
 const getDomainUrl = (request: Request): string => {
 	const host =
@@ -11,7 +12,7 @@ const getDomainUrl = (request: Request): string => {
 	return `${protocol}://${host}`;
 };
 
-export async function action({ request }: ActionFunctionArgs) {
+export const action = async ({ request }: ActionFunctionArgs) => {
 	if (request.method !== 'POST') {
 		return new Response('Method not allowed', { status: 405 });
 	}
@@ -21,7 +22,7 @@ export async function action({ request }: ActionFunctionArgs) {
 		payment_method_types: ['card'],
 		line_items: [
 			{
-				price: process.env.STRIPE_PRICE_ID,
+				price: env.STRIPE_PRICE_ID,
 				quantity: 1,
 			},
 		],
@@ -34,4 +35,4 @@ export async function action({ request }: ActionFunctionArgs) {
 	}
 
 	return redirect(session.url);
-}
+};
