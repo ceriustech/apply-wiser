@@ -220,7 +220,7 @@ export default function Index() {
 							<form action="/api/checkout" method="POST">
 								<button
 									type="submit"
-									className="block w-full items-center gap-2 bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02]"
+									className="block cursor-pointer w-full items-center gap-2 bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02]"
 								>
 									Start Optimizing Your Search Today
 								</button>
