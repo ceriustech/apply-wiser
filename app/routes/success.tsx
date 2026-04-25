@@ -27,6 +27,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export default function SuccessPage() {
 	const data = useLoaderData<typeof loader>();
 
+	console.log('Loader data:', data);
+
 	if (data.status !== 'success') {
 		return (
 			<main className="min-h-screen flex items-center justify-center font-sans">
@@ -66,6 +68,7 @@ export default function SuccessPage() {
 
 				<a
 					href={data.copyUrl}
+					// href={env.GOOGLE_SHEET_COPY_URL}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="cursor-pointer inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02] mb-4"

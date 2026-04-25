@@ -46,12 +46,12 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 			// 4. Send the delivery email
 			try {
 				await resend.emails.send({
-					from: 'ApplyWiser <hello@applywiser.app>',
+					from: 'ApplyWiser <hello@contact.applywiser.app>',
 					to: customerEmail,
 					subject: 'Your LIFT Job Application Tracker is ready!',
 					html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-              <h1 style="color: #1e293b; font-size: 24px;">Welcome to LIFT!</h1>
+              <h1 style="color: #1e293b; font-size: 24px;">Apply wiser with LIFT!</h1>
               <p style="color: #475569; font-size: 16px; line-height: 1.6;">
                 Thanks for your purchase! Your job application tracker is ready to go.
               </p>
