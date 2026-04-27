@@ -199,7 +199,7 @@ export default function Index() {
 							PRICING
 						</div>
 						<div className="p-8">
-							<div className="grid grid-cols-2 gap-6 mb-6">
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 								<div>
 									<div className="text-6xl font-bold text-slate-900 leading-none">
 										$9
